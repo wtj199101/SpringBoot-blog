@@ -9,13 +9,14 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="T_USER_T")
+@Table(name="AUT_USER_T")
 public class User extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1883838431615170196L;
     @Id
     @NotNull
+    @Column(name="user_id")
     private String id;
-    @Column(name="Name")
+    @Column(name="User_Name")
     private String name;
     @Column(name="PASSWORD")
     private String password;

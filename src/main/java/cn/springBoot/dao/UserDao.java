@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import cn.springBoot.model.User;
-@Repository
+@Repository("userDao")
 public interface UserDao extends PagingAndSortingRepository<User, String>, JpaSpecificationExecutor<User> {
     User findByName(String name);
     @Query("from User t where id=:id")

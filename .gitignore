@@ -6,3 +6,4 @@ rebel.xml
 datesoure.properties
 application.properties
 1.txt
+##git check-ignore -v  datesoure.properties

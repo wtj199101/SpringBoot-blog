@@ -7,3 +7,7 @@ datesoure.properties
 application.properties
 1.txt
 ##git check-ignore -v  datesoure.properties
+# 对于.gitignore 不生效
+#git rm -r --cached .
+#git add .
+#git commit -m 'update .gitignore'

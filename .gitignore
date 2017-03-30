@@ -4,5 +4,5 @@ target
 .project
 rebel.xml
 datesoure.properties
-src/main/resources/application.properties
+/resources/application.properties
 1.txt

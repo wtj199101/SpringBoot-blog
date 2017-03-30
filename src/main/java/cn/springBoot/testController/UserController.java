@@ -13,6 +13,7 @@ import cn.springBoot.testService.UserService;
 public class UserController {
     @Autowired
     private UserService userService;
+    
     @RequestMapping("/getperson")
     public String getPerson(HttpServletRequest request) {
         String name="测试百货";

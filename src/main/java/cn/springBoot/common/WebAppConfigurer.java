@@ -13,10 +13,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @author Administrator
  *
  */
-@Configuration
+//@Configuration
 //@Import(cn.springBoot.common.DruidDBConfig.class)
-@EnableWebMvc
-@ComponentScan(basePackages={"cn.springBoot.*"})
+//@EnableWebMvc
+//@ComponentScan(basePackages={"cn.springBoot.*"})
 public class WebAppConfigurer extends WebMvcConfigurerAdapter{
     /**
      * 配置拦截器

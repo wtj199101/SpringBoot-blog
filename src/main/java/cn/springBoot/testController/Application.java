@@ -1,15 +1,24 @@
 package cn.springBoot.testController;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ServletComponentScan
-@ComponentScan(basePackages={"cn.springBoot.testController","cn.springBoot.testService","cn.springBoot.testService.Impl"})
+@SpringBootApplication(scanBasePackages={"cn.springBoot"})  //The @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration and @ComponentScan
+//@ComponentScan(basePackages={"cn.springBoot"})
+//@Configuration
+//@EnableAutoConfiguration 
+//@EntityScan(basePackages={})
 public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication app = new SpringApplication(Application.class);
+        app.setBannerMode(Banner.Mode.OFF);
+        app.run(args);
+//        SpringApplication.run(Application.class, args);
+//        new SpringApplicationBuilder()
+//        .sources(Parent.class)
+//        .child(Application.class)
+//        .bannerMode(Banner.Mode.OFF)
+//        .run(args);
     }
 }

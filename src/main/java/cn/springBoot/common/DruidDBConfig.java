@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -20,10 +24,12 @@ import com.alibaba.druid.pool.DruidDataSource;
  * @Primary表示这里定义的DataSource将覆盖其他来源的DataSource。
  * @author ZSX jdbc.url=${jdbc.url} 最新的支持方式如下: jdbc.url=@jdbc.url@
  */
-@PropertySource(value="classpath:BootTestController.properties")
+@PropertySource(value="classpath:application.properties")
 //@EnableTransactionManagement(proxyTargetClass=true)
 @Configuration
-@EnableJpaRepositories("cn.springBoot.dao")
+@EnableJpaRepositories(basePackages={"cn.springBoot.dao"})
+//@EnableJpaRepositories(entityManagerFactoryRef)
+//@EnableTransactionManagement
 public class DruidDBConfig  {
     @Value("${spring.datasource.url}")
     private String dbUrl;
@@ -84,7 +90,7 @@ public class DruidDBConfig  {
     @Primary
     public DruidDataSource  dataSource() {
         DruidDataSource datasource = new DruidDataSource();
-        datasource.setDbType(type);
+//        datasource.setDbType(type);
         datasource.setUrl(this.dbUrl);
         datasource.setUsername(username);
         datasource.setPassword(password);
@@ -111,4 +117,23 @@ public class DruidDBConfig  {
 
         return datasource;
     }
+    @Bean
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+
+      HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+      vendorAdapter.setGenerateDdl(true);
+
+      LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
+      factory.setJpaVendorAdapter(vendorAdapter);
+      factory.setPackagesToScan("cn.springBoot.model");
+      factory.setDataSource(dataSource());
+      return factory;
+    }
+//    @Bean
+//    public PlatformTransactionManager transactionManager() {
+//
+//      JpaTransactionManager txManager = new JpaTransactionManager();
+//      txManager.setEntityManagerFactory(entityManagerFactory());
+//      return txManager;
+//    }
 }

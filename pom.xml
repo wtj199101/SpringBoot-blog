@@ -57,6 +57,15 @@
 			<version>6</version>
 		</dependency>
 	</dependencies>
+	<build>
+    <plugins>
+    <!-- Creating an executable jar -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
 	<!-- <build> <plugins> <plugin> <groupId>org.springframework.boot</groupId> 
 		<artifactId>spring-boot-maven-plugin</artifactId> <dependencies> <dependency> 
 		<groupId>org.springframework</groupId> <artifactId>springloaded</artifactId> 

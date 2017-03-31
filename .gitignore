@@ -10,3 +10,4 @@ application.properties
 #git rm -r --cached .
 #git add .
 #git commit -m 'update .gitignore'
+.idea

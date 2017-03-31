@@ -20,23 +20,17 @@ public class UserController {
     public String hello(){
      return "hello,world";   
     }
-  /**jpa**/
-    @RequestMapping("/getperson")
-    public String getPerson(HttpServletRequest request) {
-        String name="测试百货";
-        User u=userService.findByName(name);
-        return u.toString();
-    }
+
    /**mybatis**/
     @RequestMapping("/getperson2")
     public String getPerson2(HttpServletRequest request) {
-        String name="测试百货";
-        User u=userService.findByName2(name);
+        String name="zhangsan";
+        User u=userService.findByName(name);
         return u.toString();
     }
     @RequestMapping("/400")
     public ModelAndView hello400(){
-        ModelAndView mv=new ModelAndView("index");
+        ModelAndView mv=new ModelAndView("error/400");
      return mv;   
     }
 }

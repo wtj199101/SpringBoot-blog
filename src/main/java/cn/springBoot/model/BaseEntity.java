@@ -1,6 +1,7 @@
 package cn.springBoot.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -11,31 +12,24 @@ import javax.persistence.MappedSuperclass;
  * @author Administrator
  *
  */
-@MappedSuperclass
+//@MappedSuperclass
 public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 4645944526377343850L;
 
-    @Column(name = "CREATE_TIME", nullable = false, updatable = false)
-    private Long createTime;
+//    @Column(name = "CREATE_TIME", nullable = false, updatable = false)
+    private Date createTime;
 
-    @Column(name = "CREATE_USER_ID", nullable = false, updatable = false)
+//    @Column(name = "CREATE_USER_ID", nullable = false, updatable = false)
     private String createUserId;
 
-    @Column(name = "UPDATE_TIME")
-    private Long updateTime;
+//    @Column(name = "UPDATE_TIME")
+    private Date updateTime;
 
-    @Column(name = "UPDATE_USER_ID")
+//    @Column(name = "UPDATE_USER_ID")
     private String updateUserId;
-    @Column(name = "IS_DEL")
+//    @Column(name = "IS_DEL")
     private String isDel;
 
-    public Long getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Long createTime) {
-        this.createTime = createTime;
-    }
 
     public String getCreateUserId() {
         return createUserId;
@@ -45,13 +39,7 @@ public class BaseEntity implements Serializable {
         this.createUserId = createUserId;
     }
 
-    public Long getUpdateTime() {
-        return updateTime;
-    }
 
-    public void setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
-    }
 
     public String getUpdateUserId() {
         return updateUserId;
@@ -67,6 +55,22 @@ public class BaseEntity implements Serializable {
 
     public void setIsDel(String isDel) {
         this.isDel = isDel;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
 }

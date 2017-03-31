@@ -50,6 +50,25 @@
 			<artifactId>spring-data-oracle</artifactId>
 			<version>1.0.0.RELEASE</version>
 		</dependency>
+		<!-- spring boot -mybatis -->
+	<dependency>
+		<groupId>org.mybatis.spring.boot</groupId>
+		<artifactId>mybatis-spring-boot-starter</artifactId>
+		<version>1.1.1</version>
+	</dependency>
+	<!--  pagehelper分页插件-->
+	<dependency>
+		<groupId>tk.mybatis</groupId>
+		<artifactId>mapper-spring-boot-starter</artifactId>
+		<version>1.1.0</version>
+	</dependency>
+	<!--pagehelper -->
+	<dependency>
+		<groupId>com.github.pagehelper</groupId>
+		<artifactId>pagehelper-spring-boot-starter</artifactId>
+		<version>1.1.0</version>
+	</dependency>
+
 		<!-- oracle -->
 		<dependency>
 			<groupId>oracle</groupId>

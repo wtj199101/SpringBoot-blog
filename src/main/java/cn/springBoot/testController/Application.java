@@ -14,7 +14,7 @@ public class Application {
         SpringApplication app = new SpringApplication(Application.class);
         app.setBannerMode(Banner.Mode.OFF);
         app.run(args);
-//        SpringApplication.run(Application.class, args);
+//        SpringApplication.run(Applicatiosn.class, args);
 //        new SpringApplicationBuilder()
 //        .sources(Parent.class)
 //        .child(Application.class)

@@ -8,17 +8,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table(name="AUT_USER_T")
+//@Entity
+//@Table(name="AUT_USER_T")
 public class User extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1883838431615170196L;
-    @Id
-    @NotNull
-    @Column(name="user_id")
+//    @Id
+//    @NotNull
+//    @Column(name="user_id")
     private String id;
-    @Column(name="User_Name")
+//    @Column(name="User_Name")
     private String name;
-    @Column(name="PASSWORD")
+//    @Column(name="PASSWORD")
     private String password;
     public String getId() {
         return id;

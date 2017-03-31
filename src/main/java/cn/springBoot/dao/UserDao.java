@@ -5,13 +5,11 @@ import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
 
 import cn.springBoot.model.User;
-@Repository("userDao")
+//@Repository("userDao")
 //@NoRepositoryBean //use the annotation to prevent repository interfaces from being picked up as candidates to end up as repository bean instances eventually.
 public interface UserDao extends PagingAndSortingRepository<User, String>, JpaSpecificationExecutor<User> {
     User findByName(String name);

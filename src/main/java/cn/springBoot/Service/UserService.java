@@ -1,4 +1,4 @@
-package cn.springBoot.testService;
+package cn.springBoot.Service;
 
 import cn.springBoot.model.User;
 

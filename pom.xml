@@ -21,16 +21,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!-- 添加对jsp视图解析的支持 -->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-
+		<!-- spring boot thymeleaf -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>  
 		<!-- 只需引入spring-boot-devtools 即可实现热部署 <dependency> <groupId>org.springframework.boot</groupId> 
 			<artifactId>spring-boot-devtools</artifactId> </dependency> -->
 		<!-- 为了监控数据库 -->
@@ -71,6 +66,12 @@
 		 <dependency>
 		 	 <groupId>mysql</groupId>
 		 	 <artifactId>mysql-connector-java</artifactId>
+		</dependency>
+			<!-- oracle -->
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>6</version>
 		</dependency>
 	</dependencies>
 	

@@ -1,11 +1,11 @@
-package cn.springBoot.testService.Impl;
+package cn.springBoot.Service.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import cn.springBoot.Service.UserService;
 import cn.springBoot.mapper.UserMapper;
 import cn.springBoot.model.User;
-import cn.springBoot.testService.UserService;
 
 
 @Service

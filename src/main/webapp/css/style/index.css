@@ -9,7 +9,7 @@ text-align:center; }
 Prevents blue border in Webkit */ } 
 form { margin: 20px auto; } 
 p {line-height: 1.6; } 
-#tw-outer{ background:url("images/bg-clouds.png")repeat-x scroll 0 0 #000000; height:385px; }
+#tw-outer{/*  background:url("images/bg-clouds.png")repeat-x scroll 0 0 #000000; height:380px; */ }
  #tw-logo{margin-left:192px; width:180px; } 
  #tw-logo img{ margin-top:10px; }
 .content-bubble-arrow { background-image:url("images/arr2.gif");background-position:32px 0; background-repeat:no-repeat; height:11px;
@@ -25,28 +25,28 @@ padding:8px; width:200px; display:block; -webkit-border-radius:5px;
 -moz-border-radius:5px; border-radius:5px; -webkit-transition: all 0.5s
 ease-in-out; -moz-transition: all 0.5s ease-in-out; transition: all 0.5s
 ease-in-out; float:left; }
- #tw textarea { min-height:200px; }
+ #tw textarea { min-height:240px; }
   #tw input:hover, #tw textarea:hover { border-color:inherit !important;
 background-color:#EfEfEf; -webkit-border-radius:5px 0 0 5px;
 -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; } 
 /* The interesting bit */ 
-#tw input:not(:focus),#tw textarea:not(:focus) {
-opacity:0.6; } #tw input:required,#tw textarea:required { } #tw
-input:valid,#tw textarea:valid { opacity:0.8; } 
+#tw input:not(:focus),#tw textarea:not(:focus) {opacity:0.6; } 
+#tw input:required,#tw textarea:required { } 
+#tw input:valid,#tw textarea:valid { opacity:0.8; } 
 #tw input:focus:invalid,#tw textarea:focus:invalid { border:1px solid red;background-color:#FFEFF0; }
- #tw input[type=submit] { background:none;font-size:15px; opacity:1; padding:5px; width:150px;-moz-border-radius:5px; -webkit--border-radius:5px; border-radius:5px;
+#tw input[type=submit] { background:none;font-size:15px; opacity:1; padding:5px; width:150px;-moz-border-radius:5px; -webkit--border-radius:5px; border-radius:5px;
 cursor:pointer; margin-bottom:-10px; margin-left:103px; margin-top:10px;
-background:url("images/buttons/bg-btn.gif") repeat-x scroll 0 0 #DDDDDD;
+/* background:url("images/buttons/bg-btn.gif") repeat-x scroll 0 0 #DDDDDD; */
 text-shadow:1px 1px 0 #FFFFFF; border-color:#DDDDDD #DDDDDD #CCCCCC;
 color: #333; }
- #tw .outerDiv{ -webkit-transition: all 1s linear;
-margin-bottom:16px; margin-top:8px; } #tw .outerDiv:hover .message{
+#tw .outerDiv{ -webkit-transition: all 1s linear;
+margin-bottom:10px; margin-top:8px; }
+#tw .outerDiv:hover .message{
 opacity:1; display:block; }
- #tw .message{ width:200px; float:left;
+#tw .message{ width:200px; float:left;
 opacity:0; -moz-border-radius:0 10px 10px 0; -webkit-border-radius:0
 10px 10px 0; border-radius-bottomright:0 10px 10px 0;
-background:url("images/signup_info.gif") no-repeat scroll 13px 50%
-#F2F2F2; border-color:#DBDBDB; border-style:solid; border-width:1px 1px
+/* background:url("images/signup_info.gif") no-repeat scroll 13px 50% #F2F2F2; */ border-color:#DBDBDB; border-style:solid; border-width:1px 1px
 1px 2px; color:#666666; display:none; font-size:12px;
 line-height:1.45em; padding:0.85em 10px 0.85em 30px;
 text-transform:lowercase; } 

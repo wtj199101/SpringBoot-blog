@@ -3,12 +3,18 @@
 <mapper namespace="cn.springBoot.mapper.UserMapper">
 	<resultMap id="BaseColum"  type="cn.springBoot.model.User" >
 		<id property="id" column="id" jdbcType="VARCHAR"/>
-		<result property="username" column="userName" jdbcType="VARCHAR"/>
+		<result property="username" column="user_name" jdbcType="VARCHAR"/>
+		<result property="nickname" column="nick_name" jdbcType="VARCHAR"/>
 		<result property="password" column="password" jdbcType="VARCHAR"/>
 		<result property="phone" column="phone" jdbcType="VARCHAR"/>
 		<result property="email" column="email"  jdbcType="VARCHAR"/>
+		<result property="versionNum" column="version_num"/>
+		<result property="createUserId" column="create_user_id"/>
+		<result property="createtime" column="create_time"/>
+		<result property="updateUserId" column="update_user_id"/>
+		<result property="updatetime" column="update_time"/>
 	</resultMap>
 	<select id="selectByName" resultType="cn.springBoot.model.User">
-	select * from my_user_t where username=#{name,jdbcType=VARCHAR}
+	select * from my_user_t where user_name=#{name,jdbcType=VARCHAR}
 	</select>
 </mapper>

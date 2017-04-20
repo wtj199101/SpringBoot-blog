@@ -4,7 +4,8 @@ drop table  IF exists MY_USER_T;
 
 CREATE TABLE IF NOT EXISTS MY_USER_T (
 id varchar(19) Primary key ,
-userName varchar(60) NOT NULL ,
+nick_name varchar(60) NOT NULL ,
+user_name varchar(60) NOT NULL ,
 password varchar(60) NOT NULL ,
 phone varchar(30) NOT NULL,
 email varchar(100) NOT NULL,

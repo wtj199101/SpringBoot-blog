@@ -3,7 +3,6 @@ package cn.springBoot.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import cn.springBoot.Service.UserService;
 import cn.springBoot.model.User;
 
-@RestController
+@RestController("user")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -20,7 +19,6 @@ public class UserController {
      return "hello,world";   
     }
 
-   /**mybatis**/
     @RequestMapping("/index")
     public ModelAndView getPerson2(HttpServletRequest request) {
         String name="zhangsan";
@@ -30,5 +28,10 @@ public class UserController {
         System.out.println(u.toString());
         return mv;
     }
- 
+    @RequestMapping("/register")
+    public ModelAndView register(HttpServletRequest request) {
+        ModelAndView mv=new ModelAndView("index");
+        System.out.println("注册成功");
+        return mv;
+    }
 }

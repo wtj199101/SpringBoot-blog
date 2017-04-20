@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <typeAliases>
+<!--     <typeAliases>
         <package name="cn.springBoot.model"/>
-    </typeAliases>
+    </typeAliases> -->
     <!-- 配置文件
     <mappers>
         <mapper resource="sample/mybatis/mapper/CityMapper.xml"/>
@@ -35,7 +35,7 @@
                 <!-- 设置但JDBC类型为空时,某些驱动程序 要指定值,default:OTHER，插入空值时不需要指定类型 -->        
                 <setting name="jdbcTypeForNull" value="NULL"/>    
     </settings>
-     <plugins>        
+<!--      <plugins>        
                 <plugin interceptor="com.github.pagehelper.PageHelper">            
                         <property name="dialect" value="mysql"/>            
                         <property name="offsetAsPageNum" value="false"/>            
@@ -45,5 +45,5 @@
                         <property name="supportMethodsArguments" value="false"/>            
                         <property name="returnPageInfo" value="none"/>        
                </plugin>    
-      </plugins>
+      </plugins> -->
 </configuration>

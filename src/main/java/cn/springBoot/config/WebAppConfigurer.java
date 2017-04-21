@@ -1,18 +1,20 @@
-package cn.springBoot.common;
+package cn.springBoot.config;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import cn.springBoot.config.interceptor.LoginInterceptor;
 
 /**
  * 拦截器配置
  * @author Administrator
  *
  */
-//@Configuration
-//@Import(cn.springBoot.common.DruidDBConfig.class)
-//@EnableWebMvc
-//@ComponentScan(basePackages={"cn.springBoot.*"})
+@Configuration
+@EnableWebMvc //WebMvcAutoConfiguration不生效了
 public class WebAppConfigurer extends WebMvcConfigurerAdapter{
     /**
      * 配置拦截器
@@ -24,7 +26,7 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter{
         // addPathPatterns 用于添加拦截规则
         // excludePathPatterns 用户排除拦截
 
-//        registry.addInterceptor(new AuthInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").excludePathPatterns("/favicon.ico");
 
 
         super.addInterceptors(registry);
@@ -35,9 +37,9 @@ public class WebAppConfigurer extends WebMvcConfigurerAdapter{
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-//      registry.addResourceHandler("/new/**").addResourceLocations("classpath:/new/");
-//      registry.addResourceHandler("/**").addResourceLocations("/");
+      registry.addResourceHandler("/**").addResourceLocations("classpath:/css/**")
+      .addResourceLocations("classpath:/images/**")
+      .addResourceLocations("classpath:/js/**");
         super.addResourceHandlers(registry);
     }
 

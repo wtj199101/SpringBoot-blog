@@ -16,6 +16,7 @@ public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 4645944526377343850L;
 
     private Long versionNum;
+
     private Long createTime;
 
     private String createUserId;
@@ -24,24 +25,21 @@ public class BaseEntity implements Serializable {
 
     private String updateUserId;
 
-
     public Long getVersionNum() {
-		return versionNum;
-	}
+        return versionNum;
+    }
 
-	public void setVersionNum(Long versionNum) {
-		this.versionNum = versionNum;
-	}
+    public void setVersionNum(Long versionNum) {
+        this.versionNum = versionNum;
+    }
 
-	public String getCreateUserId() {
+    public String getCreateUserId() {
         return createUserId;
     }
 
     public void setCreateUserId(String createUserId) {
         this.createUserId = createUserId;
     }
-
-
 
     public String getUpdateUserId() {
         return updateUserId;
@@ -51,22 +49,20 @@ public class BaseEntity implements Serializable {
         this.updateUserId = updateUserId;
     }
 
-	public Long getCreateTime() {
-		return createTime;
-	}
+    public Long getCreateTime() {
+        return createTime;
+    }
 
-	public void setCreateTime(Long createTime) {
-		this.createTime = createTime;
-	}
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
+    }
 
-	public Long getUpdateTime() {
-		return updateTime;
-	}
+    public Long getUpdateTime() {
+        return updateTime;
+    }
 
-	public void setUpdateTime(Long updateTime) {
-		this.updateTime = updateTime;
-	}
-
-  
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+    }
 
 }

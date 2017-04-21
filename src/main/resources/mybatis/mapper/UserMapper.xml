@@ -10,11 +10,38 @@
 		<result property="email" column="email"  jdbcType="VARCHAR"/>
 		<result property="versionNum" column="version_num"/>
 		<result property="createUserId" column="create_user_id"/>
-		<result property="createtime" column="create_time"/>
+		<result property="createTime" column="create_time"/>
 		<result property="updateUserId" column="update_user_id"/>
-		<result property="updatetime" column="update_time"/>
+		<result property="updateTime" column="update_time"/>
 	</resultMap>
 	<select id="selectByName" resultType="cn.springBoot.model.User">
 	select * from my_user_t where user_name=#{name,jdbcType=VARCHAR}
 	</select>
+	<insert id="insertEntity">
+		insert into my_user_t  (
+		id,
+		user_name,
+		nick_name,
+		password,
+		phone,
+		email,
+		version_num,
+		create_user_id,
+		create_time,
+		update_user_id,
+		update_time
+		)values(
+		null,
+		#{username,jdbcType=VARCHAR},
+		#{nickname,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{phone,jdbcType=VARCHAR},
+		#{email,jdbcType=VARCHAR},
+		0,
+		#{createUserId,jdbcType=VARCHAR},
+		#{createTime,jdbcType=BIGINT},
+		#{updateUserId,jdbcType=VARCHAR},
+		#{updateTime,jdbcType=BIGINT}
+		)
+	</insert>
 </mapper>

@@ -2,11 +2,8 @@ package cn.springBoot.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 @Table(name = "MY_USER_T")
 public class User extends BaseEntity implements Serializable {

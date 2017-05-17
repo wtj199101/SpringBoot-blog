@@ -72,6 +72,7 @@ public class User extends BaseEntity implements Serializable {
 
     @Override
     public String toString() {
+        super.toString();
         return "User [id=" + id + ", username=" + username + ", password=" + password + ", phone=" + phone
                 + ", email=" + email + "]";
     }

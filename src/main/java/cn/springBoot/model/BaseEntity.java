@@ -1,10 +1,6 @@
 package cn.springBoot.model;
 
 import java.io.Serializable;
-import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
 
 /**
  * 基础类：时间用long表示
@@ -65,4 +61,9 @@ public class BaseEntity implements Serializable {
         this.updateTime = updateTime;
     }
 
+    @Override
+    public String toString() {
+        return "BaseEntity [versionNum=" + versionNum + ", createTime=" + createTime + ", createUserId="
+                + createUserId + ", updateTime=" + updateTime + ", updateUserId=" + updateUserId + "]";
+    }
 }

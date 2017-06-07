@@ -11,6 +11,10 @@ import cn.springBoot.model.User;
 
 @Controller
 public class IndexController {
+    @RequestMapping(value="/",method=RequestMethod.GET)
+    public String index(HttpServletRequest request,User user) {
+        return "redirect:/index";
+    }
     @RequestMapping(value="/index",method=RequestMethod.GET)
     public ModelAndView register(HttpServletRequest request,User user) {
         ModelAndView mv=new ModelAndView("blog/index");

@@ -4,10 +4,7 @@ target
 .project
 datesoure.properties
 
-1.txt
-##git check-ignore -v  datesoure.properties
-# 对于.gitignore 不生效
-#git rm -r --cached .
-#git add .
-#git commit -m 'update .gitignore'
 .idea
+application-prd.properties
+springBootTest.iml
+BootJpa.iml

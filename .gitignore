@@ -3,7 +3,8 @@ target
 .classpath
 .project
 datesoure.properties
-
+classes
+META-INF
 .idea
 application-prd.properties
 springBootTest.iml

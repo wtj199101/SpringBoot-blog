@@ -18,7 +18,7 @@ public class IndexController {
     }
     @RequestMapping(value={"/index","index.html"},method=RequestMethod.GET)
     public String register(HttpServletRequest request,User user) {
-        return "redirect:";
+        return "redirect:/";
 
     }
 }

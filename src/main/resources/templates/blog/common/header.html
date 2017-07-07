@@ -1,17 +1,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org" >
 <body>
-<div th:fragment="headerlayout" id="nav" >
+<div th:fragment="headerlayout" >
+    <div id="header">
+        <h1>雲帆博客</h1>
+        <p>Programming is like sex: one mistake and you’re providing support for a lifetime.</p>
+        <p style="text-align: right"> --MICHAEL SINZ</p>
+    </div>
+    <div  id="nav">
     <ul>
-        <li><a href="index.html">首页</a></li>
+        <li><a th:href="index.html">首页</a></li>
         <li><a th:href="diary.html">个人日记</a></li>
-        <li><a href="word.html">碎言碎语</a></li>
-        <li><a href="photo.html">相册展示</a></li>
-        <li><a href="learn.html">学无止境</a></li>
-        <li><a href="message.html">留言板</a></li>
-        <li><a href="about.html">关于我</a></li>
+        <li><a th:href="word.html">碎言碎语</a></li>
+        <li><a th:href="photo.html">相册展示</a></li>
+        <li><a th:href="learn.html">学无止境</a></li>
+        <li><a th:href="message.html">留言板</a></li>
+        <li><a th:href="about.html">关于我</a></li>
         <div class="clear"></div>
     </ul>
-</div></body>
+    </div>
+    </div>
+</body>
 </html>
 

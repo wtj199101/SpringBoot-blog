@@ -29,7 +29,7 @@ public class MybatisDBConfig implements TransactionManagementConfigurer,Environm
     private DataSource dataSource;
     
 
-    @Bean
+    @Bean(name = "txTransactionManager")
     public PlatformTransactionManager annotationDrivenTransactionManager() {
 
         return new DataSourceTransactionManager(this.dataSource);

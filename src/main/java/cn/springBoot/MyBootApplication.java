@@ -17,7 +17,6 @@ public class MyBootApplication extends SpringBootServletInitializer {
     }
     @Override
     protected  SpringApplicationBuilder configure(SpringApplicationBuilder builder){
-//        builder.bannerMode(Banner.Mode.OFF);
         return builder.sources(MyBootApplication.class);
     }
 }

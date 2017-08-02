@@ -1,7 +1,7 @@
 /* CSS Document */
 @charset "gb2312";
 *{marigin:0px; padding:0px;}
-body{font-size:14px;font-family:"微软雅黑";background:#E3E3E5 url(../images/bg.jpg)  50% top scroll no-repeat;color:#5d5d5d;}
+body{font-size:14px;font-family:"微软雅黑";color:#5d5d5d;}
 a{text-decoration:none;}
 .left{float:left;}
 .right{float:right;}
@@ -9,7 +9,7 @@ a{text-decoration:none;}
 li{list-style:none;}
 img{display:block;border:0px;}
 /*end*/
-.weizi{width:730px;height:30px;line-height:30px; background:url("../images/weizi.png") 7px 5px no-repeat; background-color:#fff;
+.weizi{width:730px;height:30px;line-height:30px;  background-color:#fff;
 border-bottom:1px solid #ccc;}
 .weizi .wz_text{font-size:16px;color:#444;padding-left:25px;}
 .weizi .wz_text h1{font-size:16px;color:#F00E71;display:inline;font-weight:500;}
@@ -39,7 +39,7 @@ color:#fff;font-weight:bold;font-size:14px; }
 #content #riji{width:730px;background:#fff;}
 #riji .rj_content{width:710px;margin-top:10px;padding:0 10px;background:#fff;padding-bottom:10px;}
 .rj_content .shiguang{width:710px;height:145px;}
-.rj_content .shiguang .sg_ico{width:120px;height:145px; background:url("../images/line_bg.jpg") 60px 0px repeat-y;
+.rj_content .shiguang .sg_ico{width:120px;height:145px;
 filter:Alpha(opacity=80);-moz-opacity: 0.8; opacity: 0.8;}
 .rj_content .shiguang .sg_ico img{border-radius:60px;margin-top:10px;}
 .rj_content .shiguang .sg_text{width:530px;height:100px;background:#fff;border:1px solid #E0DFDF;

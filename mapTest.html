@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<title>百度地图</title>
+		<style type="text/css">
+		html{height:100%}
+		body{height:100%;margin:0px;padding:0px}
+		#container{height:100%}
+		li{list-style:none}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GxPGOGjXLUIesVWiPqg2EVaEAGumGgfL"></script>
+	</head>
+	<body>
+	<ul>
+		<li> 输入地址(格式：XX市XX地点)：<input type="text" name="address" id="address"/></li>
+		<li><input type="button" name="submit" value="提交" onclick="getAddress()"></li>
+	</ul>
+		<div id="map" style="width:600px;height:420px"></div>
+
+	</body>
+	<script type="text/javascript">
+			var map;
+		function initialize() {
+			createMap();//创建地图
+			setMapEvent();//设置地图事件
+			addMapController();//向地图添加控件
+			addMapOverlay();////向地图添加覆盖物
+		}
+		function createMap(){
+			 map = new BMap.Map('map',{minZoom:6,maxZoom:18});
+			map.centerAndZoom(new BMap.Point(121.24346, 31.198258), 17);
+			map.addEventListener("dragend", function(){    
+			 var center = map.getCenter();    
+			 console.info("地图中心点变更为：" + center.lng + ", " + center.lat);    
+			});
+
+
+		}
+		function setMapEvent(){
+			map.enableScrollWheelZoom();
+			map.enableKeyboard();
+			map.enableDragging();
+			map.enableDoubleClickZoom();
+		}
+		function addClickHandler(target,window){
+			target.addEventListener("click",function(){
+					target.openInfoWindow(window)
+			});
+
+		}
+
+		function addMapOverlay(){
+			var scaleControl=new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+			scaleControl.setUnit(BMAP_UNIT_METRIC);
+			 map.addControl(scaleControl);
+			  var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_ZOOM});
+			   map.addControl(navControl);
+			    var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      			map.addControl(overviewControl);
+      			map.addControl(new BMap.MapTypeControl());
+      			//map.setCurrentCity("上海");
+		}
+		function addMapController(){
+		}
+		
+		initialize();
+	
+		//得到当前地址
+		function getAddress(){
+			var myGeo=new BMap.Geocoder();
+			// myGeo.getLocation(new BMap.Point(121.443188, 31.197982),function(res){
+			// 	console.info(res);
+			// });上海市徐家汇圣爱大厦
+			
+			var address=document.getElementById("address").value;
+			var city=address.split("市");
+			if(city.length<=1){
+				alert("请输入正确的地址带上城市");
+				return 
+			}
+			console.info("city="+city[0]+",address="+address)
+			myGeo.getPoint(address,function(point){
+				console.info(point)
+				map.centerAndZoom(point, 17);
+			},city[0]+"市")
+			}
+	
+		
+	</script>
+</html>

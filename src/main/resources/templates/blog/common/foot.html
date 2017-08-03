@@ -4,10 +4,28 @@
 <body>
 <!--footer start-->
 <div id="footer" th:fragment="footlayout">
-    <p>Design by:<a href="https://wtj199101.github.io/" target="_blank">大兄弟</a>&nbsp;&nbsp; 2017-07-07</p>
+    <p>Design by:<a href="https://wtj199101.github.io/" target="_blank">大兄弟</a>&nbsp;&nbsp; <p id="nowTime"></p></p>
 <!--footer end-->
 <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
 <script  type="text/javascript"  th:src="@{js/blogjs/nav.js}"></script>
+    <script>
+        function  getCurrday(){
+        var d = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "星期日";
+        weekday[1] = "星期一";
+        weekday[2] = "星期二";
+        weekday[3] = "星期三";
+        weekday[4] = "星期四";
+        weekday[5] = "星期五";
+        weekday[6] = "星期六";
+        var m = d.getMonth() + 1;
+        var nowday=d.getFullYear() + "年" + m + "月" + d.getDate() + "日 " + weekday[d.getDay()];
+            document.getElementById("nowTime").innerHTML=nowday;
+//            return nowday;
+    }
+        setInterval(getCurrday(),1000);
+         </script>
 </div>
 </body>
 </html>

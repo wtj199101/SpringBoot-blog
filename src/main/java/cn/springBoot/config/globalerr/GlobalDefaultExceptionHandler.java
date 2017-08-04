@@ -20,7 +20,7 @@ public class GlobalDefaultExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ModelAndView formatErrorHandler(HttpServletRequest req, Exception e) throws Exception {
         ModelAndView mav = new ModelAndView();
-        System.out.println("############### 发生exception ="+e.getLocalizedMessage());
+        System.out.println("############### 发生 #error# exception ="+e.getLocalizedMessage());
         mav.addObject("error","服务器发生错误");
         mav.addObject("exception", e);
 //        mav.addObject("url", RequestUtils.getCompleteRequestUrl(req));

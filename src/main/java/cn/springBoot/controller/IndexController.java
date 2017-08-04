@@ -21,4 +21,9 @@ public class IndexController {
         return "redirect:/";
 
     }
+    @RequestMapping("/error1")
+    public String error1(){
+            int a=1/0;
+        return "error";
+    }
 }

@@ -1,4 +1,4 @@
-package cn.springBoot.Service;
+package cn.springboot.service;
 
 /**
  * Created by Administrator on 2017/06/07.

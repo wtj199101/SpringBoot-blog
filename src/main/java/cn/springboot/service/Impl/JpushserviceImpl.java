@@ -1,4 +1,4 @@
-package cn.springBoot.Service.Impl;
+package cn.springboot.service.Impl;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.jiguang.common.ServiceHelper;
-import cn.jiguang.common.connection.HttpProxy;
 import cn.jiguang.common.connection.NativeHttpClient;
 import cn.jiguang.common.connection.NettyHttpClient;
 import cn.jiguang.common.resp.ResponseWrapper;

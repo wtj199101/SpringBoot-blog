@@ -1,6 +1,6 @@
-package cn.springBoot.Service;
+package cn.springboot.service;
 
-import cn.springBoot.model.User;
+import cn.springboot.model.User;
 
 public interface UserService {
 

@@ -1,4 +1,4 @@
-package cn.springBoot.Service;
+package cn.springboot.service;
 
 
 public abstract class BaseService<T> {

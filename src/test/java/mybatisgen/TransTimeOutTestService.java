@@ -1,15 +1,13 @@
 package mybatisgen;
 
-import cn.springBoot.MyBootApplication;
+import cn.springboot.MyBootApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
